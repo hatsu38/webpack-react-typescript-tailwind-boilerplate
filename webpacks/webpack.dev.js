@@ -15,9 +15,8 @@ module.exports = merge(common, {
   devServer: {
     historyApiFallback: true,
     hot: true,
-    host: 'localhost',
+    host: "localhost",
     port: 8080,
-    clientLogLevel: 'info',
-    headers: { 'Access-Control-Allow-Origin': '*' },
+    clientLogLevel: "info",
   },
 });
