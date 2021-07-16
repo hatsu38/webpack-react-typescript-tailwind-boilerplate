@@ -1,5 +1,5 @@
 {
-  "name": "qr-wifi",
+  "name": "webpack-react-typescript-tailwind-template",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "qr-wifi"
+    "url": "https://github.com/hatsu38/webpack-react-typescript-tailwind-template"
   },
   "description": "",
   "devDependencies": {
