@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack serve --config ./webpacks/webpack.dev.js"
   },
   "keywords": [],
   "author": "hatsu38",
@@ -18,9 +18,15 @@
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-react": "^7.14.5",
     "@babel/register": "^7.14.5",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
     "babel-loader": "^8.2.2",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.24.0",
     "html-webpack-plugin": "^5.3.2",
+    "prettier": "^2.3.2",
     "webpack": "^5.44.0",
+    "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
   }
 }
