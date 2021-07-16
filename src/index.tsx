@@ -1,12 +1,12 @@
 import React, { VFC } from "react";
 import ReactDOM from "react-dom";
 
-import "~/styles/index.scss";
+import "~/styles/index.css";
 
 
 export const Index: VFC = () => {
   return (
-    <h1>hoge</h1>
+    <h1 className="text-red-400">hoge</h1>
   );
 };
 

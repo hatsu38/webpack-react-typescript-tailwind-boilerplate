@@ -1,8 +1,13 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: ["./src/index.tsx"],
+  output: {
+    path: path.resolve("dist"),
+    filename: "[name]-[contenthash].js",
+  },
   resolve: {
     extensions: [".js", ".ts", ".tsx", ".jsx"],
     modules: ['node_modules'],
@@ -18,6 +23,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "public/index.html"
     }),
+    new MiniCssExtractPlugin({
+      filename: "styles/[name].[contenthash].css",
+      chunkFilename: "[id].[contenthash].css",
+    }),
   ],
   module: {
     rules: [
@@ -28,6 +37,24 @@ module.exports = {
           {
             loader: "ts-loader"
           }
+        ],
+      },
+      {
+        test: /\.(css)$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                ident: "postcss",
+                plugins: [
+                  require("tailwindcss"),
+                ],
+              },
+            },
+          },
         ],
       },
     ],
